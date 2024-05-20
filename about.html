@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eva's Dog Services</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+          body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            position: relative;
+            background-color: lightblue;
+        }
+        .content {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .about-section {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .about-text {
+            margin-top: 3%;
+            margin-left: 5%;
+            flex: 1;
+            padding: 7%; /* Added padding to top and bottom */
+            text-align: left;
+            font-size: 24px;
+        }
+        .about-image {
+            flex: 1;
+            max-width: 40%;
+            border-radius: 10px;
+            margin-left: 20px;
+            margin-right: 5%;
+        }
+        .about-image img {
+            max-width: 100%; /* Ensure image fits within its container */
+            border-radius: 100px;
+            height: 80vh; /* Set the height to 80% of the viewport height */
+            padding: 5%;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 0; /* Reset margin */
+        }
+       .logo-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.logo-image {
+    width: 60px; /* Adjust as needed for a larger logo */
+    height: 60px; /* Adjust as needed for a larger logo */
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 26px;
+    font-weight: bold;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo-image">
+            <div class="logo-text">Eva's Dog Services</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="about-section">
+        <div class="about-text">
+            <h2>So, who am I?</h2>
+            <p>The most amazing beautiful girl ever</p>
+            <br><br><br>
+            <h2>Why should you choose me?</h2>
+            <p>Because Im literally perfect</p>
+        </div>
+        <div class="about-image">
+            <img src="Eva.jpg" alt="Your Image">
+        </div>
+    </div>
+</body>
+</html>

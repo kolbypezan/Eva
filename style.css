@@ -1,0 +1,94 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.logo-image {
+    width: 60px; /* Adjust as needed for a larger logo */
+    height: 60px; /* Adjust as needed for a larger logo */
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav {
+    flex: 2; /* Adjust flex value to ensure the navigation spans the rest of the header */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Spans the navigation items across the whole header */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px; /* Larger font size for navigation items */
+    font-weight: bold; /* Make navigation items bolder */
+}
+
+.background-image {
+    background-image: url('dog.jpg'); /* Placeholder image URL */
+    background-size: cover;
+    background-position: center;
+    height: calc(100% - 60px); /* Adjust height to fill the remaining viewport height minus header */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align content to the bottom third of the page */
+}
+
+.content {
+    background: rgba(245, 245, 220, 0.8); /* Beige background color */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 57%; /* Adjusted width for better display */
+    height: 300px; /* Fixed height */
+    display: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-top: 25%;
+}
+
+.content p {
+    font-size: 24px; /* Larger font size for the text */
+    margin: 0 0 20px 0;
+    line-height: 1.5; /* Added line height for better readability */
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Increased padding for a larger button */
+    font-size: 18px; /* Larger font size for the button */
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

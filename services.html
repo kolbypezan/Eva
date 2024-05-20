@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eva's Dog Services</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            position: relative;
+        }
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+        .content {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px auto; /* Center the content horizontally and add margin to the top */
+            max-width: 600px; /* Limit the maximum width of the content */
+            position: relative; /* Ensure content remains in position */
+        }
+        .services-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            padding: 20px;
+            width: 100%;
+        }
+        .service-tab {
+            width: 45%;
+            text-align: center;
+            cursor: pointer;
+            position: relative; /* Position service tabs relative to content container */
+        }
+        .service-image {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .service-info {
+            display: none;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            position: absolute; /* Position service info boxes absolute */
+            top: calc(100% + 10px); /* Position service info boxes below service tabs */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%; /* Adjust width as needed */
+        }
+        .active {
+            border: 2px solid #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image" style="background-image: url('service_dog.jpg');"></div>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo-image"> <!-- Placeholder for logo image -->
+            <div class="logo-text">Eva's Dog Services</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="services-container">
+            <div class="service-tab" id="walking-tab" onclick="toggleService('walking-tab', 'walking-info')">
+                <img src="leash.jpg" alt="Walking" class="service-image">
+                <h2>Dog Walking</h2>
+            </div>
+            <div class="service-tab" id="dogsitting-tab" onclick="toggleService('dogsitting-tab', 'dogsitting-info')">
+                <img src="dog_bed.jpg" alt="Dog Sitting" class="service-image">
+                <h2>Dog Sitting</h2>
+            </div>
+        </div>
+
+        <div id="walking-info" class="service-info" style="display:none;">
+            <h2>Dog Walking</h2>
+            <p>Want your furry friend to go on a refreshing walk? As an experienced walker, I make sure your dog gets the exercise they need.</p>
+           <a href="contact.html">
+            <button>Book Now</button>
+        </a>
+        </div>
+
+        <div id="dogsitting-info" class="service-info" style="display:none;">
+            <h2>Dog Sitting</h2>
+            <p>Need someone to care for your dog while you're away? My overnight dog sitting service provides a comfortable stay for your pet.</p>
+             <a href="contact.html">
+            <button>Book Now</button>
+        </a>
+        </div>
+    </div>
+
+    <script>
+        function toggleService(clickedTab, serviceInfoId) {
+            var tabs = document.querySelectorAll('.service-tab');
+            tabs.forEach(function(tab) {
+                if (tab.id === clickedTab) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+
+            var serviceInfos = document.querySelectorAll('.service-info');
+            serviceInfos.forEach(function(info) {
+                if (info.id === serviceInfoId) {
+                    info.style.display = 'block';
+                } else {
+                    info.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
