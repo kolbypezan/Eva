@@ -4,7 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eva's Dog Services</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevent scrolling */
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f4f4f4;
+            box-sizing: border-box;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+
+        .logo-image {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        nav {
+            flex: 2;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: calc(100% - 80px); /* Adjust height to fill the remaining viewport height minus header */
+            box-sizing: border-box;
+        }
+
+        .contact-section {
+            text-align: center;
+            padding: 20px;
+            background-image: url('final.jpg'); /* Background image for the contact section */
+            background-size: cover; /* Ensure the background image covers the entire section */
+            background-position: center; /* Center the background image */
+            color: white; /* Ensure text is readable over the background image */
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-section h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .contact-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+
+        .contact-options {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .contact-option {
+            background-color: rgba(233, 236, 239, 0.8); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            width: 40%;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            text-align: center;
+            color: black; /* Text color inside the contact options */
+        }
+
+        .contact-icon img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+
+        .contact-option h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .contact-option p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,3 +155,26 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <section class="contact-section">
+            <h2>Contact Me To Book An Appointment</h2>
+            <div class="contact-options">
+                <div class="contact-option">
+                    <div class="contact-icon">
+                        <img src="phone-icon.png" alt="Call Us"> <!-- Placeholder for phone icon -->
+                    </div>
+                    <h3>Call/Text Me</h3>
+                    <p>The best way to get in contact with me is by sending me a text detailing what service you want.</p>
+                </div>
+                <div class="contact-option">
+                    <div class="contact-icon">
+                        <img src="email-icon.png" alt="Ask a Question"> <!-- Placeholder for email icon -->
+                    </div>
+                    <h3>Send Me an Email</h3>
+                    <p>Another great way to get in contact with me is by emailing me at esageramos@gmail.com</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
