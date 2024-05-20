@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eva's Dog Services</title>
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add your CSS styles here */
+    </style>
 </head>
 <body>
+     <div class="background-image" style="background-image: url('dog.jpg');"></div>
     <header>
         <div class="logo-container">
-            <img src="logo.png" alt="Logo" class="logo-image"> <!-- Placeholder for logo image -->
+            <img src="logo.png" alt="Logo" class="logo-image">
             <div class="logo-text">Eva's Dog Services</div>
         </div>
         <nav>
-            <ul>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul id="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="about.html">About Me</a></li>
@@ -24,15 +29,41 @@
         </nav>
     </header>
     <main>
-        <div class="background-image">
             <div class="content">
                 <p>Do you want your dogs to have<br> loads of fun and get absolutely spoiled?
                 <br><br>I'M THE PERSON FOR YOU! </p>
                 <a href="services.html">
-            <button style="background: grey;">Check Out My Services</button>
-        </a>
+                    <button style="background: grey;">Check Out My Services</button>
+                </a>
             </div>
         </div>
     </main>
+    
+    <script>
+        function toggleService(clickedTab, serviceInfoId) {
+            var tabs = document.querySelectorAll('.service-tab');
+            tabs.forEach(function(tab) {
+                if (tab.id === clickedTab) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+
+            var serviceInfos = document.querySelectorAll('.service-info');
+            serviceInfos.forEach(function(info) {
+                if (info.id === serviceInfoId) {
+                    info.style.display = 'block';
+                } else {
+                    info.style.display = 'none';
+                }
+            });
+        }
+
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
