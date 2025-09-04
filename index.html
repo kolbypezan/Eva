@@ -3,67 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eva's Dog Services</title>
+    <title>Eva's Dog Services - Professional Dog Walking & Sitting</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Add your CSS styles here */
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-     <div class="background-image" style="background-image: url('dog.jpg');"></div>
-    <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Logo" class="logo-image">
-            <div class="logo-text">Eva's Dog Services</div>
-        </div>
-        <nav>
-            <div class="menu-icon" onclick="toggleMenu()">☰</div>
-            <ul id="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-            <div class="content">
-                <p>Do you want your dogs to have<br> loads of fun and get absolutely spoiled?
-                <br><br>I'M THE PERSON FOR YOU! </p>
-                <a href="services.html">
-                    <button style="background: grey;">Check Out My Services</button>
-                </a>
+
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="Eva's Dog Services Logo" class="logo-image">
+                <a href="index.html" class="logo-text">Eva's Dog Services</a>
             </div>
+            <nav class="main-nav">
+                <ul class="nav-list" id="menu">
+                    <li><a href="index.html" class="nav-active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-icon" id="menu-icon">☰</div>
         </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-background-image" style="background-image: url('dog.jpg');"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Reliable & Loving Care For Your Best Friend</h1>
+                <p class="hero-subtitle">Professional dog walking and sitting services in the Addison area, ensuring your dog gets the adventure and attention they deserve.</p>
+                <a href="services.html" class="button-primary">Explore My Services</a>
+            </div>
+        </section>
     </main>
     
-    <script>
-        function toggleService(clickedTab, serviceInfoId) {
-            var tabs = document.querySelectorAll('.service-tab');
-            tabs.forEach(function(tab) {
-                if (tab.id === clickedTab) {
-                    tab.classList.add('active');
-                } else {
-                    tab.classList.remove('active');
-                }
-            });
+    <footer class="site-footer">
+        <p>&copy; 2025 Eva's Dog Services. All Rights Reserved.</p>
+    </footer>
 
-            var serviceInfos = document.querySelectorAll('.service-info');
-            serviceInfos.forEach(function(info) {
-                if (info.id === serviceInfoId) {
-                    info.style.display = 'block';
-                } else {
-                    info.style.display = 'none';
-                }
-            });
-        }
-
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            menu.classList.toggle('show');
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

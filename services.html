@@ -3,243 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eva's Dog Services</title>
+    <title>Our Services - Eva's Dog Services</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Comic Sans MS', sans-serif;
-            position: relative;
-            overflow-y: auto; /* Ensure body can scroll */
-        }
-        .background-image {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            z-index: -1;
-        }
-        .content {
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px auto;
-            max-width: 600px;
-            position: relative;
-            z-index: 0;
-        }
-        .services-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-end;
-            padding: 20px;
-            width: 100%;
-        }
-        .service-tab {
-            width: 45%;
-            text-align: center;
-            cursor: pointer;
-            position: relative;
-        }
-        .service-image {
-            width: 100px;
-            height: auto;
-            margin-bottom: 10px;
-        }
-        .service-info {
-            display: none;
-            background-color: #f4f4f4;
-            padding: 20px;
-            border-radius: 10px;
-            position: absolute;
-            top: calc(100% + 10px);
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-        }
-        .active {
-            border: 2px solid #007BFF;
-        }
-        header {
-            width: 100%;
-            background-color: white; /* Change header background to white */
-            color: black; /* Ensure text color is black */
-            padding: 10px 0; /* Reduce padding for smaller header */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            z-index: 2; /* Ensure header is in front */
-        }
-        .logo-container {
-            display: flex;
-            align-items: center;
-            margin-left: 20px;
-        }
-        .logo-image {
-            width: 40px;
-            height: 40px;
-            margin-right: 10px;
-        }
-        .logo-text {
-            font-size: 1.3em;
-        }
-        nav {
-            position: relative;
-            margin-right: 20px;
-        }
-        .menu-icon {
-            cursor: pointer;
-            display: none;
-            font-size: 4em;
-            position: relative;
-          margin-left: 40%;
-            margin-top: -7%;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 15px;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li a {
-            color: black; /* Ensure link color is black */
-            text-decoration: none;
-            padding: 10px 15px; /* Increase padding for menu items */
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        nav ul li a:hover {
-            background-color: rgba(0, 0, 0, 0.1);
-        }
-        @media only screen and (max-width: 900px) {
-            .menu-icon {
-                display: block;
-            }
-            nav ul {
-                flex-direction: column;
-                align-items: flex-end; /* Align items to the right */
-                position: fixed; /* Fix position to the right side */
-                top: 50px; /* Position menu below header */
-                right: 0;
-                background-color: white; /* Ensure background color is white */
-                display: none;
-                width: 200px; /* Set a fixed width */
-                padding: 10px; /* Add padding */
-                z-index: 1; /* Ensure menu is in front */
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for better visibility */
-            }
-            nav ul li {
-                margin: 10px 0;
-            }
-            nav ul.show {
-                display: flex;
-            }
-        }
-        @media only screen and (max-width: 500px) {
-            .logo-text {
-                font-size: 1.2em;
-            }
-            .service-image {
-                width: 80px;
-            }
-            .service-tab h2 {
-                font-size: 1.5em;
-            }
-            .service-info {
-                top: calc(100% + 20px);
-                width: 95%;
-            }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="background-image" style="background-image: url('service_dog.jpg');"></div>
 
-    <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Logo" class="logo-image">
-            <div class="logo-text">Eva's Dog Services</div>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="Eva's Dog Services Logo" class="logo-image">
+                <a href="index.html" class="logo-text">Eva's Dog Services</a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list" id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="nav-active">Services</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-icon" id="menu-icon">☰</div>
         </div>
-        <nav>
-            <div class="menu-icon" onclick="toggleMenu()">☰</div>
-            <ul id="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <div class="content">
-        <div class="services-container">
-            <div class="service-tab" id="walking-tab" onclick="toggleService('walking-tab', 'walking-info')">
-                <img src="leash.jpg" alt="Walking" class="service-image">
-                <h2>Dog Walking</h2>
+    <main class="page-container">
+        <div class="background-image" style="background-image: url('service_dog.jpg');"></div>
+        <div class="content-box">
+            <h1 class="page-title">My Services</h1>
+            <p class="page-intro">I offer tailored services to meet the needs of you and your furry companion. Select a service below to learn more.</p>
+
+            <div class="services-container">
+                <div class="service-tabs">
+                    <div class="service-tab active" data-tab="walking">
+                        <img src="leash.jpg" alt="Dog leash icon" class="service-image">
+                        <h2>Dog Walking</h2>
+                    </div>
+                    <div class="service-tab" data-tab="sitting">
+                        <img src="dog_bed.jpg" alt="Dog bed icon" class="service-image">
+                        <h2>Dog Sitting</h2>
+                    </div>
+                </div>
+
+                <div id="walking" class="service-info active">
+                    <h2>Adventure-Filled Dog Walks</h2>
+                    <p>Each walk is more than just a potty break; it's a fun adventure! We'll explore your neighborhood or local parks, ensuring your dog gets plenty of physical exercise and mental stimulation. Walks are available in 30, 45, or 60-minute sessions.</p>
+                    <a href="contact.html" class="button-primary">Book a Walk</a>
+                </div>
+
+                <div id="sitting" class="service-info">
+                    <h2>Cozy & Safe Dog Sitting</h2>
+                    <p>Going out of town? I provide attentive in-home dog sitting so your dog can stay comfortable in their own environment. You'll receive daily updates and photos, giving you complete peace of mind while you're away.</p>
+                    <a href="contact.html" class="button-primary">Book a Stay</a>
+                </div>
             </div>
-            <div class="service-tab" id="dogsitting-tab" onclick="toggleService('dogsitting-tab', 'dogsitting-info')">
-                <img src="dog_bed.jpg" alt="Dog Sitting" class="service-image">
-                <h2>Dog Sitting</h2>
-            </div>
         </div>
+    </main>
 
-        <div id="walking-info" class="service-info">
-            <h2>Dog Walking</h2>
-            <p>Want your furry friend to go on a refreshing walk? As an experienced walker, I make sure your dog gets the exercise they need.</p>
-            <a href="contact.html">
-                <button>Book Now</button>
-            </a>
-        </div>
+    <footer class="site-footer">
+        <p>&copy; 2025 Eva's Dog Services. All Rights Reserved.</p>
+    </footer>
 
-        <div id="dogsitting-info" class="service-info">
-            <h2>Dog Sitting</h2>
-            <p>Need someone to care for your dog while you're away? My overnight dog sitting service lets you go out without leaving your dogs alone.</p>
-            <a href="contact.html">
-                <button>Book Now</button>
-            </a>
-        </div>
-    </div>
+    <script src="script.js"></script>
+</body>
+</html>
 
-    <script>
-        function toggleService(clickedTab, serviceInfoId) {
-            var tabs = document.querySelectorAll('.service-tab');
-            tabs.forEach(function(tab) {
-                if (tab.id === clickedTab) {
-                    tab.classList.add('active');
-                } else {
-                    tab.classList.remove('active');
-                }
-            });
-
-            var serviceInfos = document.querySelectorAll('.service-info');
-            serviceInfos.forEach(function(info) {
-                if (info.id === serviceInfoId) {
-                    info.style.display = 'block';
-                } else {
-                    info.style.display = 'none';
-                }
-            });
-        }
-
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            menu.classList.toggle('show');
-        }
     </script>
 </body>
 </html>
